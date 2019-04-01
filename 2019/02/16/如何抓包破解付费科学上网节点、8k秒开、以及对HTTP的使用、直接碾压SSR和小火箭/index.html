@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="文章图片被墙、看时记得挂代理
+写在前面的话
+去租服务器、自己搭建梯子、或者去购买别人搭建好的。即花钱还浪费时间。因为就算你去购买别人的代理你不仅每个月要花几十块钱、很多网站还需要你去注册充钱、所以这一套套的流程算下来就等于即伤钱、还浪费时间、
+所以今天我教大家如何去抓包破解别人付费插件上的服务器！既简单又高效、绝对无本万利、一次就能用永久！
+来看看速度如何
+不是破解来的服务器代理速度慢、而是因为我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费">
+<meta property="og:url" content="www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/index.html">
+<meta property="og:site_name" content="跨界思者">
+<meta property="og:description" content="文章图片被墙、看时记得挂代理
+写在前面的话
+去租服务器、自己搭建梯子、或者去购买别人搭建好的。即花钱还浪费时间。因为就算你去购买别人的代理你不仅每个月要花几十块钱、很多网站还需要你去注册充钱、所以这一套套的流程算下来就等于即伤钱、还浪费时间、
+所以今天我教大家如何去抓包破解别人付费插件上的服务器！既简单又高效、绝对无本万利、一次就能用永久！
+来看看速度如何
+不是破解来的服务器代理速度慢、而是因为我">
+<meta property="og:image" content="https://i.imgur.com/ZBoN0Xe.jpg">
+<meta property="og:updated_time" content="2019-03-20T10:24:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费">
+<meta name="twitter:description" content="文章图片被墙、看时记得挂代理
+写在前面的话
+去租服务器、自己搭建梯子、或者去购买别人搭建好的。即花钱还浪费时间。因为就算你去购买别人的代理你不仅每个月要花几十块钱、很多网站还需要你去注册充钱、所以这一套套的流程算下来就等于即伤钱、还浪费时间、
+所以今天我教大家如何去抓包破解别人付费插件上的服务器！既简单又高效、绝对无本万利、一次就能用永久！
+来看看速度如何
+不是破解来的服务器代理速度慢、而是因为我">
+<meta name="twitter:image" content="https://i.imgur.com/ZBoN0Xe.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">跨界思者</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="https://www.lazyman.vip/">返回主页</a></li>
+         
+          <li><a href="https://lazymanl.github.io/2016/10/17/%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E3%80%81%E6%89%80%E6%9C%89%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/">福利合集</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E4%BD%A0%E5%A5%BD%E3%80%81%E9%99%8C%E7%94%9F%E4%BA%BA/">关于博主</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">科学上网</a></li>
+         
+          <li><a href="http://lackar.com/aa/?utm_source=mindstore.io">上网导航</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E5%8F%8B%E9%93%BE%E6%8E%A8%E8%8D%90/">友链推荐</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E7%A4%BE%E7%BE%A4%E9%93%BE%E6%8E%A5/">付费社群</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/02/23/分享一个无本万利空手套白狼年赚千万美金的海外创业项目/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2019/02/11/如何利用人性、以及传播学、营销学、让你心仪的“他”或“她”来倒追你、还把你视如珍宝/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&text=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&is_video=false&description=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费&body=Check out this article: www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&name=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#导读"><span class="toc-number">1.</span> <span class="toc-text">导读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">2.1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1、先去谷歌应用商店安装webvpn插件"><span class="toc-number">2.2.</span> <span class="toc-text">1、先去谷歌应用商店安装webvpn插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装proxy-switchyomega代理插件"><span class="toc-number">2.3.</span> <span class="toc-text">2、安装proxy switchyomega代理插件</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">跨界思者</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-02-15T17:34:58.000Z" itemprop="datePublished">2019-02-16</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/全部文章/">全部文章</a>, <a class="tag-link" href="/tags/实用技巧/">实用技巧</a>, <a class="tag-link" href="/tags/实用技术/">实用技术</a>, <a class="tag-link" href="/tags/干货福利/">干货福利</a>, <a class="tag-link" href="/tags/科学上网/">科学上网</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="https://i.imgur.com/ZBoN0Xe.jpg" rel="gallery_cjtyg3mhl002dswr5uxabzxuu">
+        <img src="https://i.imgur.com/ZBoN0Xe.jpg" itemprop="image" />
+    </a>
+    
+</div>
+
+
+  <div class="content" itemprop="articleBody">
+    <p><em>文章图片被墙、看时记得挂代理</em></p>
+<p><strong>写在前面的话</strong></p>
+<p>去租服务器、自己搭建梯子、或者去购买别人搭建好的。即花钱还浪费时间。因为就算你去购买别人的代理你不仅每个月要花几十块钱、很多网站还需要你去注册充钱、所以这一套套的流程算下来就等于即伤钱、还浪费时间、</p>
+<p>所以今天我教大家如何去抓包破解别人付费插件上的服务器！既简单又高效、绝对无本万利、一次就能用永久！</p>
+<p>来看看速度如何</p>
+<p><img src="https://i.imgur.com/kaNLfiq.jpg" alt=""><br>不是破解来的服务器代理速度慢、而是因为我没在家、所以我是在酒店用自己的4G网写的这篇文章！</p>
+<h1 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h1><p>首先你需要一个可以支持谷歌浏览器插件的浏览器、因为今天教大家破解的是一款谷歌付费的代理插件！《需要用到代理才能破解、所以先用我博客里免费的节点翻墙了再去弄》如果懒得看的话直接把教程跳到2去、我会把我破解出来的服务器地址分享出来、所以你只需要去看如何使用这些服务器地址就行了</p>
+<p><strong>你需要先给谷歌浏览器装两款插件</strong></p>
+<p>1、 webvpn《破解的就是这款插件的服务器》</p>
+<ul>
+<li>webvpn下载地址：<a href="https://chrome.google.com/webstore/unsupported?hl=zh-CN" target="_blank" rel="external">webvpn点我下载</a></li>
+</ul>
+<p>2、proxy switchyomega《这是一款谷歌服务器代理的插件》</p>
+<p>也可以这样理解、webvpn付费插件破解来的服务器需要放到proxy switchyomega这款代理插件里去使用！</p>
+<ul>
+<li>proxy switchyomega下载地址：<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN" target="_blank" rel="external">proxy switchyomega点我下载</a></li>
+</ul>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26306530&auto=1&height=66"></iframe></h2><h2 id="1、先去谷歌应用商店安装webvpn插件"><a href="#1、先去谷歌应用商店安装webvpn插件" class="headerlink" title="1、先去谷歌应用商店安装webvpn插件"></a>1、先去谷歌应用商店安装webvpn插件</h2><p><img src="https://i.imgur.com/cU2aoKB.png" alt=""></p>
+<p>安装完成后需要注册</p>
+<p><img src="https://i.imgur.com/3waNWIs.jpg" alt=""><br>打开页面后先选择左上角的登录或注册页面、然后选择注册、用你自己的邮箱注册、注册后需要你登录你的邮箱验证、这里很简单傻子都会！</p>
+<p>接下来注册好了以后再去谷歌浏览器右上角找到小狐狸标志的这款插件、然后输入刚才你注册的邮箱登录！</p>
+<p><img src="https://i.imgur.com/7IXZ0JA.png" alt=""><br>注册好的新用户会有一天的免费试用期限、所以找到我用箭头标出来的设置的标志、点一下</p>
+<p><strong>打开后这一步非常重要</strong><br><img src="https://i.imgur.com/MHOh5px.png" alt=""><br>打开后、先按下 F12 键后就会出现这个界面。出现这个显示代码的页面后、在去点一下获取服务器的按钮、就是我上图用红色箭头标出来的那里、</p>
+<p><img src="https://i.imgur.com/heUTJIt.png" alt=""></p>
+<p>点完后再去点一下代码串里我用剪头标出来的那个三角形的符号</p>
+<p><img src="https://i.imgur.com/DBLcFpw.png" alt=""><br>然后在点一下：servers</p>
+<p><img src="https://i.imgur.com/MH8E2Nz.png" alt=""></p>
+<p>然后就会出现这个页面、然后把我画出来的这串代码用点一下左键全复制下来、去自己的电脑本地新建一个txt的文本文档粘贴下来、</p>
+<p><strong>里面servers后面引号里的这些https代理服务器、这些就是这款插件付费的代理服务器地址！</strong></p>
+<p><img src="https://i.imgur.com/7yYb7gN.png" alt=""></p>
+<p>复制到本地后像我这样、把这些服务器地址还有端口复制出来备用！如果还没反应过来的、我会把我选出来的这些服务器放到文章尾末！继续讲如何使用这些服务器！</p>
+<h2 id="2、安装proxy-switchyomega代理插件"><a href="#2、安装proxy-switchyomega代理插件" class="headerlink" title="2、安装proxy switchyomega代理插件"></a>2、安装proxy switchyomega代理插件</h2><p>安装方法也跟刚才的这个webvpn一样、我已经安装好了、所以我就不演示如何安装了、自己去点连接下载安装就行了！</p>
+<p>安装好后再浏览器右上角找到图标打开<br><img src="https://i.imgur.com/Zp4K2RP.png" alt=""></p>
+<p>先点一下图标打开、然后在点一下选项打开</p>
+<p><img src="https://i.imgur.com/24FlkWy.png" alt=""><br>然后先点一下新建情景模式、跳出来后名字随便写、这一步我也不演示了、新建完成后、找到你刚才的新建模式的名字点开、在点一下我标出来的呢个代理协议下的三角形符号、选择HTTPS代理、</p>
+<p><img src="https://i.imgur.com/TRHA2GX.png" alt=""></p>
+<p>然后后面的代理服务器就填上你刚才破解来那款付费的服务器就行了、端口就是：号后面的数字、然后在选择应用选项保存后就搞定了、然后返回到页面、使用你刚才设置好的这个代理路线、就行了、速度绝对秒杀你付费买来的ssr节点、IOS小火箭的节点！如果服务器不能用的你就换、添加的方法一样！而且IOS和安卓手机的ssr也能用、但是安卓手机需要ROOT才行、苹果不需要、直接可以像电脑一样直接代理、只要这款插件永远不死、你就可以一直免费使用下去、绝对一本万利哈哈哈。。。。</p>
+<p><strong>我弄出来能用的服务器地址、如果懒得自己去操作的直接用我的就行了</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">www.gunan.bid:<span class="number">9001</span></div><div class="line"></div><div class="line">sg102932.cdn-aliyun.com:<span class="number">443</span></div><div class="line"></div><div class="line">uksadjsafsa.cdn-aliyun.com:<span class="number">443</span></div><div class="line"></div><div class="line">los<span class="number">-2.</span>cdn-aliyun.com:<span class="number">888</span></div></pre></td></tr></table></figure>
+<p>冒号前面的是服务器地址、后面的数字是端口《用的时候冒号不要填进去》</p>
+<p>当然如果你在机智一点呢、还可整理出来后拿去卖、这款插件的节点费用也不低、而且你直接卖给别人永久免费的哈哈。。。。所以自己去动动脑子钱就来了</p>
+<p><strong>折腾这些呢是没事时候无聊折腾一下、自己给自己找点事做打发打发时间、靠这些小玩意呢是没用的、不会让给你活得更好、所以感兴趣的呢可以去看看我博客里的付费文章、感兴趣的自己先看完描述后没问题了都能接受再去看、看完如果觉得不值的或者看不懂的加我微信我把钱退给你</strong></p>
+<p>最后只是希望开发这款插件的作者不要看到这篇文章、不然我想非得打断我的腿不可哈哈哈。。。。。。</p>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="https://www.lazyman.vip/">返回主页</a></li>
+         
+          <li><a href="https://lazymanl.github.io/2016/10/17/%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E3%80%81%E6%89%80%E6%9C%89%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/">福利合集</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E4%BD%A0%E5%A5%BD%E3%80%81%E9%99%8C%E7%94%9F%E4%BA%BA/">关于博主</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">科学上网</a></li>
+         
+          <li><a href="http://lackar.com/aa/?utm_source=mindstore.io">上网导航</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E5%8F%8B%E9%93%BE%E6%8E%A8%E8%8D%90/">友链推荐</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E7%A4%BE%E7%BE%A4%E9%93%BE%E6%8E%A5/">付费社群</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#导读"><span class="toc-number">1.</span> <span class="toc-text">导读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开始"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">2.1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1、先去谷歌应用商店安装webvpn插件"><span class="toc-number">2.2.</span> <span class="toc-text">1、先去谷歌应用商店安装webvpn插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装proxy-switchyomega代理插件"><span class="toc-number">2.3.</span> <span class="toc-text">2、安装proxy switchyomega代理插件</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&text=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&is_video=false&description=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费&body=Check out this article: www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&title=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=www.lazyman.vip/2019/02/16/如何抓包破解付费科学上网节点、8k秒开、以及对HTTP的使用、直接碾压SSR和小火箭/&name=如何抓包破解科学上网节点、8k秒开、以及对HTTPS的使用、直接碾压SSR和小火箭、永久免费&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 lazyman
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="https://www.lazyman.vip/">返回主页</a></li>
+         
+          <li><a href="https://lazymanl.github.io/2016/10/17/%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E3%80%81%E6%89%80%E6%9C%89%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/">福利合集</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E4%BD%A0%E5%A5%BD%E3%80%81%E9%99%8C%E7%94%9F%E4%BA%BA/">关于博主</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/01/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">科学上网</a></li>
+         
+          <li><a href="http://lackar.com/aa/?utm_source=mindstore.io">上网导航</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E5%8F%8B%E9%93%BE%E6%8E%A8%E8%8D%90/">友链推荐</a></li>
+         
+          <li><a href="https://www.lazyman.vip/2018/08/13/%E7%A4%BE%E7%BE%A4%E9%93%BE%E6%8E%A5/">付费社群</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
